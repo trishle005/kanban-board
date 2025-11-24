@@ -1,17 +1,12 @@
 'use client'
 
-import { PropsWithChildren } from 'react'
-import { NhostProvider } from '@nhost/react'
+import type { ReactNode } from 'react'
+import { NhostProvider } from '@nhost/nextjs'
 import { NhostApolloProvider } from '@nhost/react-apollo'
-
 import { nhost } from '@/lib/nhost'
-import { makeClient } from '@/app/apollo-client'
-
-const apolloClient = makeClient() 
-
-export default function Providers({ children }: PropsWithChildren) {
+export default function Providers({ children }: { children?: ReactNode }) {
   return (
-    <NhostProvider nhost={nhost}>
+    <NhostProvider nhost={nhost as any}>
       <NhostApolloProvider nhost={nhost as any}>
         {children}
       </NhostApolloProvider>
