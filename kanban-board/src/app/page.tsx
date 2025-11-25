@@ -1,6 +1,6 @@
 'use client'
 
-import { useAuthenticationStatus } from '@nhost/nextjs'
+import { useAuthenticationStatus } from '@nhost/react'
 import Link from 'next/link'
 
 export default function Home() {
