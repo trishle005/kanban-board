@@ -35,7 +35,6 @@ export default function RootLayout({
           <div className = "text-xl font-bold">Kanban Board</div>
           <div className = "flex gap-4 text-sm">
             <Link href = "/" className = "hover:underline">Home</Link>
-            <Link href = "/about" className = "hover:underline">About</Link>
             <Link href="/login" className="hover:underline">Login</Link>
             <Link href = "/boards" className = "hover:underline">Boards</Link>
           </div>
