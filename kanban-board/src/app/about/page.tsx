@@ -1,34 +1,12 @@
 'use client';
 
-import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import { useEffect } from "react";
-
-
 export default function AboutPage() {
-    const handleClick = () => {
-        console.log("clicked");
-    };
-    useEffect(() => {
-        console.log("API Base:", process.env.NEXT_PUBLIC_API_BASE);
-    }, []);
-
-    useEffect(() => {
-        document.title = "About - Kanban Board";
-    }, []);
-
-    return (
-        <div className="p-6">
-            <Card className="w-[400px] mx-auto">
-                <CardHeader>
-                    <CardTitle>About</CardTitle>
-                    <CardDescription>This is a profile card.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <Button onClick={handleClick}>Click Me</Button>
-                </CardContent>
-            </Card>
-
-        </div>
-    );
+  return (
+    <main className="min-h-screen flex flex-col items-center justify-center px-4">
+      <h1 className="text-3xl font-semibold mb-2">About this project</h1>
+      <p className="text-base text-muted-foreground max-w-xl text-center">
+        This is a kanban board built with Next.js, Nhost, Apollo, and drag and drop.
+      </p>
+    </main>
+  );
 }
